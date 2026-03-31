@@ -13,6 +13,13 @@ import { defineConfig, devices } from '@playwright/test';
  * @see https://playwright.dev/docs/test-configuration
  */
 export default defineConfig({
+  use: {
+    headless: false,
+    viewport: null,
+    launchOptions: {
+      args: ['--start-maximized']
+    }
+  },
   timeout: 70000,
   testDir: './chos',
   /* Run tests in files in parallel */
@@ -39,6 +46,7 @@ export default defineConfig({
     {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
+      
     },
 
     {
