@@ -1,5 +1,4 @@
 import { test, expect } from '@playwright/test';
-
 test('Verify Change Location button exists in the CHOS application', async ({ page }) => {
 
 //Script to check Change Location button exists in the CHOS application
@@ -10,7 +9,7 @@ test('Verify Change Location button exists in the CHOS application', async ({ pa
   await page.locator("(//input[@class='form-control'])[1]").click()
   await page.locator("(//input[@class='form-control'])[1]").fill ('3M000002')
   await page.locator("(//input[@type='radio'])[2]").click()
-await page.locator(("//button[text()='Apply & Continue']")).click()});
+await page.locator(("//button[text()='Apply & Continue']")).click()
+// 
 
-
-
+});

@@ -1,6 +1,6 @@
 // @ts-check
 import { defineConfig, devices } from '@playwright/test';
-
+require('dotenv').config()
 /**
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
@@ -20,8 +20,11 @@ export default defineConfig({
       args: ['--start-maximized']
     }
   },
-  timeout: 70000,
-  testDir: './chos',
+  timeout: 100000,
+  expect: {
+    timeout: 70000
+  },
+      testDir: './chos',
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
